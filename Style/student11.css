@@ -1,0 +1,351 @@
+
+
+body{
+    margin: 0px;
+    background-color: black;
+    padding: 0px;
+    font-family:monospace;
+    
+}
+
+.all-page{
+  
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.596),rgba(0,0,0,0.75)),url(images/young-collage-student-using-computer-mobile-device-studying-online-education-online-learning.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    margin-top: -100px;
+    z-index: 1;
+    
+   
+}
+
+
+
+
+.nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    background-color:transparent;
+    position: fixed;
+    top: 0px;
+  
+    z-index: 10;
+
+}
+
+
+.profile{
+    text-decoration: none;
+    margin-left: 45px;
+    font-size: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+    position: relative;
+    padding: 5px;
+    color: white;
+}
+.profile:hover{
+    color:#06c2af;
+}
+.lll{ 
+    display: inline; 
+    list-style-type: none; 
+    
+}
+
+
+
+
+
+.profile::after{
+    content: "";
+    height: 3px;
+    width: 0;
+    background-color:  #06c2af;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s;
+    border-radius: 10px;
+    color: #06c2af;
+}
+.profile:hover::after{
+    width: 100%;
+   
+}
+
+
+.admin{
+    display: flex;
+   align-items: center;
+   justify-content: space-around;
+   
+}
+
+.admin p{
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+  
+}
+
+.admin img{
+    width:50px;
+    margin-right: 20px;
+}
+.menu{
+    display: none;
+}
+
+
+.head{ 
+   
+    font-size: 25px; 
+    margin-left: 200px; 
+    margin-top: 100px; 
+    position: relative; 
+    top: 150px; 
+    color: white; 
+    animation: head 0.8s ease-in-out forwards; 
+    opacity: 0; 
+} 
+@keyframes head { 
+    0%{ 
+        transform: translateY(30px); 
+        opacity: 0; 
+    } 
+    100%{ 
+        transform: translateY(0px); 
+        opacity: 1; 
+    } 
+}
+
+.head2{
+    margin-top: -40px;
+}
+
+.head p{
+    width: 400px;
+    margin-top: -20px;
+    color: rgb(206, 205, 205);
+}
+
+
+
+.container{
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    position: relative;
+    top: 150px;
+}
+
+
+.card{
+    width: 240px;
+    height: 260px;
+    background-color: rgba(255, 255, 255, 0.308);
+    margin-left: 20px;
+    text-align: center;
+    border-radius: 7px;
+    box-shadow: rgb(36, 36, 36) 0px 0px 5px 0px;
+    margin-top: 30px;
+    opacity: 0;
+    
+    
+}
+.card_one{ 
+    animation:card_one 0.8s 0.5s ease-in-out forwards; 
+} 
+@keyframes card_one{ 
+    0%{ 
+        transform: translateY(30px); 
+        opacity: 0; 
+    } 
+    100%{ 
+        transform: translateY(0px); 
+        opacity: 1; 
+    } 
+} 
+.card_two{ 
+    animation:card_two 0.8s 0.5s ease-in-out forwards ; 
+} 
+@keyframes card_two{ 
+    0%{ 
+        transform: translateY(30px); 
+        opacity: 0; 
+    } 
+    100%{ 
+        transform: translateY(0px); 
+        opacity: 1; 
+    } 
+} 
+.card_three{ 
+    animation:card_three 0.8s 0.5s ease-in-out forwards ; 
+} 
+@keyframes card_three{ 
+    0%{ 
+        transform: translateY(30px); 
+        opacity: 0; 
+    } 
+    100%{ 
+        transform: translateY(0px); 
+        opacity: 1; 
+    } 
+} 
+.card_four{ 
+    animation:card_four 0.8s 0.5s ease-in-out forwards; 
+} 
+@keyframes card_four{ 
+    0%{ 
+        transform: translateY(30px); 
+        opacity: 0; 
+    } 
+    100%{ 
+        transform: translateY(0px); 
+        opacity: 1; 
+    } 
+}
+
+
+.circle{
+    width: 50px;
+   margin-top: 20px;
+}
+
+
+
+.together{
+    width: 210px;
+    height: 235px;
+    /* background-image: linear-gradient(rgba(0, 243, 141, 1),#009EFF); */
+    background-color: #06c2af;
+    margin: 14px;
+    border-radius: 7px;
+    transition: 0.4s;
+
+}
+
+.together:hover{
+    transform: translateY(-50px);
+    background-color: #0ba797;
+}
+
+
+
+
+
+
+.info{
+    display: inline-block;
+    text-decoration: none;
+    width: 130px;
+    height: 20px;
+    border-radius: 5px;
+    padding: 10px;
+    border: 3px solid #54e7d9;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+    
+}
+
+.info:hover{
+    background-color: #5dd8cc;
+}
+
+.together p{
+    margin-top: -8px;
+    color:rgb(37, 37, 37);
+    font-size: 18px;
+}
+@media (max-width:1000px){
+    .profile{
+        font-size: 20px;
+    }
+    .nav{
+        height: 80px;
+    }
+}
+@media (max-width:780px){
+    .nav ul{
+        display: none;
+    }
+    .admin{
+        margin-right: 100px;
+    }
+    .menu{
+        display: block;
+    }
+}
+
+@media (max-width:630px){
+
+    .head{
+        position: relative;
+        right: 120px;
+    }
+}
+@media (min-width:630px){
+
+    .menu_list{
+        display: none;
+       
+    }
+}
+ 
+
+.menu_list{
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    display: none; 
+   
+}
+.lists{
+    list-style-type: none;
+    width: 150px;
+    height: 250px;
+    padding-right: 20px;
+}
+.icon{
+    text-decoration: none;
+    font-size: 22px;
+    color:black;
+    
+}
+.list{
+    padding: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+   
+}
+.icon:hover{
+    color:#06b4a3 ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

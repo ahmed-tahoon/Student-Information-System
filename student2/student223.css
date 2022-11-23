@@ -1,0 +1,404 @@
+table{
+    width: 80%;
+    height: 550px;
+    margin: auto;
+    border-collapse:collapse ;
+    background-color:rgba(255, 255, 255, 0.233);
+    border-radius: 10px;
+    margin-top: 170px;
+    font-size: 20px;
+    color: black;
+    display:block;
+    overflow-y: auto;
+    overflow-x: auto;
+
+}
+th{
+    text-align: left;
+    height: 55px;
+    background-color: #63c9bf;
+    padding-left: 50px;
+   
+    color: white;
+    width: 100vw;
+
+}
+body{
+    font-family: monospace;
+    background-image: linear-gradient(to right,#808080,#3fada8);
+    color: white;
+    margin: 0px;
+}
+tr{
+    height: 65px;
+    border-bottom: 1px solid #ddd;
+    
+   
+}
+.small{
+    min-width: 220px;
+}
+td{
+    padding-left: 50px;
+}
+h1{
+    position: absolute;
+    left: 155px;
+    top: 100px;
+}
+
+
+  tr:hover {
+      background-color: #d6eeeeaf;
+      cursor: pointer;
+    }
+.add{
+    position: fixed;
+    right: 120px;
+    bottom: 40px;
+    cursor: pointer;
+}
+.button{
+    position: absolute;
+    top: 120px;
+    right: 155px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color:rgb(252, 249, 249);
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.5s;
+
+}
+.button:hover{
+    background-color:rgb(31, 30, 30) ;
+    color: white;
+}
+/*========================================================  NAV  =================================================================================================*/
+.nav{
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    justify-content: space-around;
+    align-items: center;
+    background-color:rgb(31, 30, 30);
+    position: fixed;
+    top: 0px;
+    z-index: 10;
+
+}
+.profile{
+    text-decoration: none;
+    margin-left: 45px;
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    transition: 0.3s;
+    cursor: pointer;
+    position: relative;
+    padding: 5px;
+    color: white;
+}
+.profile:hover{
+    color:#06c2af;
+}
+.lll{ 
+    display: inline; 
+    list-style-type: none; 
+    
+}
+
+
+
+
+
+.profile::after{
+    content: "";
+    height: 3px;
+    width: 0;
+    background-color:  #06c2af;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s;
+    border-radius: 10px;
+    color: #06c2af;
+}
+.profile:hover::after{
+    width: 100%;
+   
+}
+.admin{
+    display: flex;
+   align-items: center;
+   justify-content: space-around;
+   
+}
+
+.admin p{
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+  
+}
+
+.admin img{
+    width:50px;
+    margin-right: 20px;
+}
+.menu{
+    display: none;
+}
+.menu_list{
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    display: none; 
+   
+}
+.lists{
+    list-style-type: none;
+    width: 150px;
+    height: 250px;
+    padding-right: 20px;
+}
+.icon{
+    text-decoration: none;
+    font-size: 22px;
+    color:black;
+    
+}
+.list{
+    padding: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+   
+}
+.icon:hover{
+    color:#06b4a3 ;
+}
+@media (max-width:1000px){
+    .profile{
+        font-size: 20px;
+    }
+    .nav{
+        height: 80px;
+    }
+    .right{
+        position: absolute;
+        right: 80px;
+    }
+    .left{
+        position: absolute;
+        left: 80px;
+    }
+}
+@media (max-width:780px){
+    .nav ul{
+        display: none;
+    }
+    .admin{
+        margin-right: 100px;
+    }
+    .menu{
+        display: block;
+    }
+    .right{
+        position: absolute;
+        right: 80px;
+    }
+    .left{
+        position: absolute;
+        left: 80px;
+    }
+}
+
+@media (max-width:630px){
+
+    .head{
+        position: relative;
+        right: 120px;
+    }
+}
+@media (min-width:630px){
+
+    .menu_list{
+        display: none;
+       
+    }
+}
+.opacity{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.616);
+    display: none;
+}
+@media(max-width:564px){
+      .left{
+          margin-right: 40px;
+          font-size: 25px;
+      }
+
+}
+
+
+.logout{
+  
+    width: 100px;
+    height: 35px;
+    border: 3px solid  #06c2af ;
+    background-color: white;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 15px;
+    transition: 0.3s;
+}
+.logout:hover{
+    background-color: #06c2af;
+
+}
+
+/* 000000000000000000000000000000000000000    student form     000000000000000000000000000000000000000*/
+
+/* .student-form{
+    width: 560px;
+    height: 770px;
+    background-color: rgb(32, 32, 32);
+    color: white;
+    padding: 35px;
+    padding-top: 4px;
+    border-radius: 13px;
+    font-family: Arial, Helvetica, sans-serif;;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 12;
+    display: none;
+ 
+}
+
+.adress{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inputs{
+     width: 560px;
+     height: 45px;
+     border: none;
+     outline: none;
+     padding-left: 10px;
+     box-shadow: 0px 0px 5px 0px black ;
+     border-radius: 2px;
+     background-color: rgba(221, 216, 216, 0.911);
+}
+
+h3{
+    color: #06c2af;
+}
+
+
+textarea{
+    width: 560px;
+    height: 70px;
+    border: none ;
+    outline: none;
+    padding-left: 10px;
+    box-shadow: 0px 0px 5px 0px black ;
+    border-radius: 2px;
+    background-color: rgba(221, 216, 216, 0.911);
+}
+
+.submting{
+    display: block;
+    width: 100px;
+    height: 40px;
+    color: white;
+    background-color: #06c2af;
+    transition: 0.3s;
+    font-weight: bold;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+      position: relative;
+    left: 430px;
+    margin: 20px;
+
+}
+.submting:hover{
+    background-color: #05a393;
+    transform: scale(1.1);
+    cursor: pointer;
+  
+}
+
+@media(max-width:768px){
+    .student-form{
+        width: 470px;
+    }
+    .inputs{
+        width: 470px;
+    }
+    textarea{
+        width: 470px;
+    }
+    .submting{
+        position: relative;
+        left: 350px;
+    }
+
+}
+
+
+@media(max-width:600px){
+    .student-form{
+        width: 350px;
+    }
+    .inputs{
+        width: 350px;
+    }
+    textarea{
+        width: 350px;
+    }
+    .submting{
+        position: relative;
+        left: 230px;
+    }
+
+}
+.exit{
+    cursor: pointer;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

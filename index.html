@@ -1,0 +1,93 @@
+<?php
+$x="";
+session_start(); 
+if(isset($_SESSION['username'])){ 
+header('Location: direct1.php');
+}
+
+$dsn = 'mysql:host=localhost;dbname=project'; 
+$user = 'root';
+$pass= '';
+$option = array (
+       
+  PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',
+
+);
+
+try {
+
+   $con =new PDO($dsn , $user ,$pass , $option);
+   
+   $con->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+
+}
+
+catch(PDOException  $e)
+{
+echo 'faild to connect ' . $e->getMessage();
+} 
+
+
+if ($_SERVER['REQUEST_METHOD'] =='POST')
+{
+
+$username = $_POST['email'];
+$password = $_POST['pass'];
+$hashedpass = sha1($password);
+
+$stmt = $con->prepare("SELECT Email , Passwords FROM users WHERE email = ? AND Passwords = ? " ) ;
+$stmt->execute(array($username , $hashedpass )); 
+$count = $stmt->rowCount();
+
+if ($count > 0 )
+{
+
+$_SESSION['username']=$username; 
+header('Location: direct1.php');
+exit();
+
+} 
+else 
+{
+
+$x="Email or Password incorrect , please try agail -_- ";
+
+}
+}
+
+?>
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <script src="project.js"></script>
+    </head>
+  <body>
+        
+            <div class="card">
+                <div class="photo"></div>
+                <div class="text">
+                <img src="man (1).png" width="85px" class="person">
+                    <h1>Welcome!</h1>
+                    <form class = 'login' action = "<?php echo $_SERVER['PHP_SELF'] ?>"method = "POST" >
+                        <div class="first">
+                            <img src="email.png" height="30px"class="img">
+                            <input type="email" name = 'email' placeholder="Enter your email" required>
+                        </div>
+                        <div class="first">
+                            <img src="key.png" height="30px" class="img">
+                            <input type="password"  name =  'pass'  placeholder="Enter password"minlength="8"  maxlength="15"required  title="Password length must be at least 8 characters and not exceed 15 characters" id="pass">
+                            <img src="eye (2).png" class="eye" height="32px" onclick="eye()">
+                            <img src="invisible.png" class="eye2"  height="30px" onclick="eye2()">
+                        </div>
+
+                        <input type="submit" value="Login" id="submit">
+                        <h1  class="forget"><?php echo $x ?> </a>
+
+                    </form>
+                    
+                </div>
+               
+            </div>
+    
+    </body>
+</html>
